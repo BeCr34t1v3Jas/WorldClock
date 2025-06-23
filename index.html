@@ -12,28 +12,38 @@
     <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.43/builds/moment-timezone-with-data.min.js"></script>
   </head>
   <body>
-    <div class="app-container">
-      <div class="header">
-        <h1>World Clocks</h1>
-        <img src="assets/logo.png" alt="SheCodes Logo" />
+    <div class="page-wrapper">
+      <div class="app-container">
+        <div class="header">
+          <h1>World Clocks</h1>
+          <img src="assets/logo.png" alt="SheCodes Logo" />
+        </div>
+
+        <select id="city-select">
+          <option value="">Choose city</option>
+          <option value="America/Los_Angeles|Los Angeles 🇺🇸">
+            Los Angeles 🇺🇸
+          </option>
+          <option value="Australia/Sydney|Sydney 🇦🇺">Sydney 🇦🇺</option>
+          <option value="Asia/Tokyo|Tokyo 🇯🇵">Tokyo 🇯🇵</option>
+          <option value="Europe/Paris|Paris 🇫🇷">Paris 🇫🇷</option>
+        </select>
+
+        <label class="checkbox-label">
+          <input type="checkbox" id="keep-active" />
+          Keep active clocks
+        </label>
+
+        <div id="user-clock"></div>
+        <div id="clocks-container"></div>
+
+        <a href="#" id="back-home" style="display: none">← Back to homepage</a>
       </div>
 
-      <select id="city-select">
-        <option value="">Choose city</option>
-        <option value="America/Los_Angeles|Los Angeles 🇺🇸">
-          Los Angeles 🇺🇸
-        </option>
-        <option value="Australia/Sydney|Sydney 🇦🇺">Sydney 🇦🇺</option>
-        <option value="Asia/Tokyo|Tokyo 🇯🇵">Tokyo 🇯🇵</option>
-        <option value="Europe/Paris|Paris 🇫🇷">Paris 🇫🇷</option>
-      </select>
-
-      <label class="checkbox-label">
-        <input type="checkbox" id="keep-active" />
-        Keep active clocks
-      </label>
-
-      <div id="clocks-container"></div>
+      <footer>
+        Hosted by Netlify • Made by
+        <a href="https://github.com/BeCr34t1v3Jas" target="_blank">Jasmin</a>
+      </footer>
     </div>
 
     <script src="src/index.js"></script>
