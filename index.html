@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>World Clock</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.43/builds/moment-timezone-with-data.min.js"></script>
+  </head>
+  <body>
+    <div class="app-container">
+      <div class="header">
+        <h1>World Clocks</h1>
+        <img src="assets/logo.png" alt="SheCodes Logo" />
+      </div>
+
+      <select id="city-select">
+        <option value="">Choose city</option>
+        <option value="America/Los_Angeles|Los Angeles 🇺🇸">
+          Los Angeles 🇺🇸
+        </option>
+        <option value="Australia/Sydney|Sydney 🇦🇺">Sydney 🇦🇺</option>
+        <option value="Asia/Tokyo|Tokyo 🇯🇵">Tokyo 🇯🇵</option>
+        <option value="Europe/Paris|Paris 🇫🇷">Paris 🇫🇷</option>
+      </select>
+
+      <label class="checkbox-label">
+        <input type="checkbox" id="keep-active" />
+        Keep active clocks
+      </label>
+
+      <div id="clocks-container"></div>
+    </div>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
